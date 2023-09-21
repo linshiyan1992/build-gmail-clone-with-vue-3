@@ -10,10 +10,17 @@
 
 <script>
 import MailTable from './components/MailTable.vue';
+import useEmailSelection from './composables/useEmailSelection';
 export default {
   name: 'App',
   components: {
     MailTable,
+  },
+  setup() {
+    let emailSelection = useEmailSelection();
+    return {
+      emailSelection,
+    };
   },
 };
 </script>
